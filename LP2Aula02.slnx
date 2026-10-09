@@ -1,2 +1,4 @@
 <Solution>
+  <Project Path="CatFromLastWeek/CatFromLastWeek.csproj" />
+  <Project Path="ClassVsStruct/ClassVsStruct.csproj" />
 </Solution>
