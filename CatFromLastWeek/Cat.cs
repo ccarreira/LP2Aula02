@@ -41,7 +41,7 @@ namespace CatFromLastWeek
             }
         }
 
-        public Mood MoodStatus  { get; private set; }
+        public Mood MoodStatus { get; private set; }
 
         private Cat()
         {
@@ -102,5 +102,12 @@ namespace CatFromLastWeek
             Console.WriteLine($"{Name} says \"Meow\"!");
             Energy -= EnergyLossAfterMeow;
         }
+
+        //tuplos
+        public (string catName, int catEnergy) GetNameEnergy()
+        {
+            return (Name, energy);
+        }
+
     }
 }

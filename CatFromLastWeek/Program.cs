@@ -43,6 +43,12 @@ namespace CatFromLastWeek
             Console.WriteLine("Estado final dos gatos:");
             ShowCat(cat1);
             ShowCat(cat2);
+
+            //tuplos
+            (string catName, int catEnergy) ne = cat1.GetNameEnergy();
+
+            Console.WriteLine("Name is " + ne.catName);
+            Console.WriteLine("Energy is " + ne.catEnergy);
         }
 
         private static void ShowCat(Cat cat)
@@ -51,5 +57,7 @@ namespace CatFromLastWeek
                 "\tNome={0}, Energia={1}, Alimentação={2}, Disposição={3}",
                 cat.Name, cat.Energy, cat.FeedStatus, cat.MoodStatus);
         }
+
+
     }
 }

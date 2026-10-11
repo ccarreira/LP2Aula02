@@ -4,6 +4,9 @@ namespace ClassVsStruct
 {
     public class Program
     {
+
+
+
         private static void Main(string[] args)
         {
 
@@ -14,7 +17,7 @@ namespace ClassVsStruct
             player_01 = new Player
             {
                 Health = 130,
-                Armor = 10
+                // Armor = 10
             };
 
             player_02 = player_01;
@@ -41,6 +44,20 @@ namespace ClassVsStruct
             Console.WriteLine("Player 02 Health: " + player_02.Health);
             Console.WriteLine("Player 02 Armor: " + player_02.Armor);
 
+            //out / ref
+            int a;
+            int b = 10;
+
+            AlteraVars(out a, ref b);
+
+            Console.WriteLine(a); // 3
+            Console.WriteLine(b); // 17
+
+        }
+        public static void AlteraVars(out int x, ref int y)
+        {
+            x = 3;
+            y = 17;
         }
 
         public static void DuplicateHealth(Player player)
